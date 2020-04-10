@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: auth-service.pod
+spec:
+  containers:
+    - image: auth-service
+      name: auth-service
+      imagePullPolicy: Never
+      resources: {}
+      ports:
+        - containerPort: 3100
+      env:
+        - name: authUrl
+          value: 'http://keycloak.default.svc.cluster.local:8080'
+      

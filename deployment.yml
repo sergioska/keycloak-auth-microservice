@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: auth-service
+  name: auth-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: auth-service
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: auth-service
+    spec:
+      containers:
+      - image: auth-service
+        name: auth-service
+        imagePullPolicy: Never
+        resources: {}
+        ports:
+          - containerPort: 3100 
+status: {}
