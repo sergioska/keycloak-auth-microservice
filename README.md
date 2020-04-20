@@ -1,4 +1,4 @@
-# Auth Service Microservice
+# Auth Microservice
 
 Auth Service is a node microservice that use keycloak to authorize an user
 
